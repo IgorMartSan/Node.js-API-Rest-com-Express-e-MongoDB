@@ -1,12 +1,22 @@
 import express from "express";
+import db from "./config/dbConnection.js";
+import livros from "./models/Livro.js"
+
+
+db.on("error", console.log.bind(console,"Erro de conexão"));
+db.once("open",()=>{
+    console.log('conexão com banco feira com sucesso');
+});
+
 
 const app = express();
 app.use(express.json()); 
 
-const livros = [
+
+/* const livros = [
     { id: 1, "titulo": "livro 1" },
     { id: 2, "titulo": "livro 2" }
-];
+]; */
 
 
 
@@ -18,7 +28,10 @@ app.get('/', (req, res) => {
 
 //metodo http get retorna todos os livros
 app.get('/livros', (req, res) => {
+    livros.find((err,livro)=>{
     res.status(200).json(livros);
+    });
+    
 })
 
 
