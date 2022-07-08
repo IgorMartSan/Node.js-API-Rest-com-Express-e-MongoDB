@@ -3,7 +3,7 @@
 
 Foi criado uma API Rest para cadastrar recursos como livros, autores, usando boas práticas como: dividir os pacotes em “controlador”, “models” e “rotas”. Foram utilizados verbos HTTP para buscar corretamente os livros, cadastrar, atualizar e excluir  (CRUD).
 
-Para implementação do banco de dados MongoDB, foi utilizado os serviços gratuitos do site https://www.mongodb.com/atlas/database, por meio foram criados a base de dados utilizada no sistema.
+Para implementação do banco de dados MongoDB, foi utilizado os serviços gratuitos do site https://www.mongodb.com/atlas/database, por meio deste foi criado a base de dados utilizada no sistema.
 
 Bibliotecas utilizadas:
 
