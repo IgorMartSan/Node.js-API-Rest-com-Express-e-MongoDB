@@ -1,4 +1,4 @@
-import express from "express";
+import  express  from 'express';
 import LivroController from "../controllers/livroController.js";
 
 const router = express.Router();
@@ -6,6 +6,7 @@ const router = express.Router();
 
 router
 .get("/livros", LivroController.listarLivros)//listar Todos
+.get("/livros/buscar/:editora", LivroController.listarLivrosPorEditora)
 .post("/livros",LivroController.cadastrarLivro)//cadastrar
 .put("/livros/:id",LivroController.atualizarLivro)//atualizar
 .get("/livros/:id",LivroController.listarLivroPorId)//listar por ID

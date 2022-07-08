@@ -1,12 +1,13 @@
-import livros from "../models/livro.js";
+import livros from "../models/livros.js";
 
 class LivroController {
 
     //metodo http get retorna todos os livros
     static listarLivros = (req, res) => {
-        livros.find((err, livro) => {
+        livros.find()
+        .populate('autor')
+        .exec((err, livro) => {
             res.status(200).send(livro);
-            //console.log(livro);
         });
 
 
@@ -55,6 +56,21 @@ class LivroController {
             res.status(500).send({menssage: err.menssage})
         }
     })
+    }
+
+    static listarLivrosPorEditora = (req,res) => {
+         const editora = req.params.editora;
+         livros.find ({"editora": editora},{},(err,livros)=>{
+            if (!err){
+                res.status(200).send(livros)
+            }else {
+                res.status(400).send({menssage : err.message})
+
+            }
+
+
+         });
+
     }
 
 
