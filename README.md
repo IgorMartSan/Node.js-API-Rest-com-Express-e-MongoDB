@@ -14,10 +14,6 @@ Nodemon: é uma biblioteca que faz o livereload, permite programar o tempo intei
 Express: é um Framework  desenvolvido para otimizar a construção de aplicações web e APIs.
 
 
-Configuração do banco de dados
-
-Configurando 
-
 Comando para iniciar o sistema:
 
 npm run dev
