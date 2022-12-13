@@ -16,6 +16,7 @@ Express: é um Framework  desenvolvido para otimizar a construção de aplicaç�
 
 Comando para iniciar o sistema:
 
+npm install
 npm run dev
 
 
